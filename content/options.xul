@@ -39,7 +39,7 @@
 
 <!DOCTYPE prefwindow SYSTEM "chrome://igfw/locale/prefwindow.dtd">
 
-<prefwindow id="igfwPreferences" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;">
+<prefwindow id="igfwPreferences" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;" buttons="accept,cancel">
   <prefpane id="pane1" label="&pane1.title;" flex="1">
     <preferences>
       <preference id="filterlist" name="extensions.igfw.filterlist" type="string"/>

@@ -72,8 +72,8 @@ var igfw = {
       this.highlight();
     }
     else if (e.button == 2) {
-      window.openDialog("chrome://igfw/content/options.xul", null, 
-                        "chrome,centerscreen,dependent");
+      window.openDialog("chrome://igfw/content/options.xul", "iGFW Preferences", 
+                        "chrome,centerscreen,modal");
     }
   },
   
