@@ -1,0 +1,6 @@
+<!ENTITY prefwindow.title "iGFW Preferences">
+<!ENTITY pane1.title "iGFW Preferences">
+<!ENTITY background.label "Highlight Background">
+<!ENTITY background.accesskey "B">
+<!ENTITY filterlist.label "URL patterns">
+<!ENTITY filterlist.accesskey "F">
