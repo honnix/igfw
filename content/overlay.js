@@ -73,7 +73,7 @@ var igfw = {
     }
     else if (e.button == 2) {
       window.openDialog("chrome://igfw/content/options.xul", "iGFW Preferences", 
-                        "chrome,centerscreen,modal");
+                        "chrome,centerscreen,titlebar,toolbar,dialog=no,resizable");
     }
   },
   
