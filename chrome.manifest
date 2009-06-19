@@ -1,0 +1,4 @@
+content	igfw	content/
+locale	igfw	en-US	locale/en-US/
+skin	igfw	classic/1.0	skin/
+overlay	chrome://browser/content/browser.xul	chrome://igfw/content/firefoxOverlay.xul
