@@ -1,5 +1,7 @@
 <!ENTITY prefwindow.title "iGFW Preferences">
 <!ENTITY pane1.title "iGFW Preferences">
+<!ENTITY checkenableautogoogle.label "Enable auto check for google.com">
+<!ENTITY checkenableautogoogle.accesskey "E">
 <!ENTITY background.label "Highlight Background">
 <!ENTITY background.accesskey "B">
 <!ENTITY filterlist.label "URL patterns">

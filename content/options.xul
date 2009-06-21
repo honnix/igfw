@@ -42,9 +42,12 @@
 <prefwindow id="igfwPreferences" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;" buttons="accept,cancel">
   <prefpane id="pane1" label="&pane1.title;" flex="1">
     <preferences>
+      <preference id="enableautogoogle" name="extensions.igfw.enableautogoogle" type="bool"/>
       <preference id="filterlist" name="extensions.igfw.filterlist" type="string"/>
       <preference id="background" name="extensions.igfw.background" type="string"/>
     </preferences>
+
+    <checkbox id="checkenableautogoogle" preference="enableautogoogle" label="&checkenableautogoogle.label;" accesskey="&checkenableautogoogle.accesskey;"/>
 
     <label accesskey="&background.accesskey;" control="textbackground">&background.label;</label>
     <textbox id="textbackground" preference="background" />

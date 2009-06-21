@@ -36,10 +36,12 @@
 
 var igfw = {
   prefs: null,
+  enableAutoGoogle: true,
   background: "#eee",
   filterList: null,
 
   loadPrefs: function() {
+    this.enableAutoGoogle = this.prefs.getBoolPref("enableautogoogle");
     this.background = this.prefs.getCharPref("background");
     var filterString = this.prefs.getCharPref("filterlist");
     this.filterList = filterString.replace("\r", "").split("\n");
@@ -65,6 +67,22 @@ var igfw = {
     this.prefs.addObserver("", this, false);
 
     this.loadPrefs();
+
+    var appContent = document.getElementById("appcontent");
+
+    if (appContent != null) {
+      appContent.addEventListener("DOMContentLoaded", igfw.onPageLoad, true);
+    }
+  },
+
+  onPageLoad: function(e) {
+    var doc = e.originalTarget;
+
+    if (doc.nodeName == "#document" &&
+        igfw.enableAutoGoogle &&
+        doc.location.href.match("google\.com/search")) {
+      igfw.highlight();
+    }
   },
 
   onStatusClick: function(e) {
@@ -83,16 +101,7 @@ var igfw = {
 
   observe: function(subject, topic, data) {
     if (topic == "nsPref:changed") {
-      switch (data) {
-        case "background":
-        case "filterlist":
-          this.loadPrefs();
-
-          break;
-
-        default:
-          break;
-      }
+      this.loadPrefs();
     }
   },
 
